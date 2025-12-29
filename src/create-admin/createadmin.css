@@ -1,0 +1,8 @@
+.forms{
+    background-color: rgb(234, 240, 232);
+    transition: none;
+}
+.forms :hover{
+    transition: none;
+    box-shadow: none;
+}/* Card – no shadow, no animation */

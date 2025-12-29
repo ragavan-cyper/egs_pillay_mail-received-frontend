@@ -1,0 +1,39 @@
+.loginpage {
+  background-color: rgb(250, 247, 247);
+}
+form {
+  background-color: rgb(24, 201, 224);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+form:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15), 0 20px 40px rgba(0, 0, 0, 0.08);
+  transform: translateY(-6px);
+}
+/* Message wrapper - center of screen */
+.msg-wrapper {
+  position: fixed;
+  top: 30px; /* mela irukkanum na change pannalaam */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+
+/* Message box style */
+.msg-box {
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+.danger {
+  background-color: red;
+}
+.success {
+  background-color: greenyellow;
+}
+p{
+  color: black;
+  text-decoration: none;
+}
