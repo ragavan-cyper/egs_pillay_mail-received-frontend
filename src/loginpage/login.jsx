@@ -4,7 +4,7 @@ import "../loginpage/login.css";
 import axios from "axios";
 
 function Login() {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
   const [data, setData] = useState({
     email: "",
     password: "",
@@ -34,11 +34,9 @@ function Login() {
         { withCredentials: true }
       );
 
-    
       if (res.status === 200) {
         setSuccess(res.data.message);
 
-        
         localStorage.setItem("token", res.data.token);
 
         setTimeout(() => {
@@ -46,7 +44,6 @@ function Login() {
           navigate("/homepage");
         }, 1000);
       }
-
     } catch (err) {
       if (err.response?.status === 401) {
         setError("ACCOUNT NOT FOUND");
@@ -62,7 +59,6 @@ function Login() {
 
   return (
     <div className="loginpage">
-      
       <div className="msg-wrapper">
         {error && <div className="alert alert-danger">{error}</div>}
         {success && <div className="alert alert-success">{success}</div>}
@@ -71,7 +67,6 @@ function Login() {
       <div className="container">
         <div className="row justify-content-center align-items-center vh-100">
           <div className="col-12 col-sm-10 col-md-6 col-lg-4">
-
             <form className="border p-4 rounded shadow" onSubmit={submitevent}>
               <h4 className="text-center mb-4">Login</h4>
 
@@ -99,7 +94,6 @@ function Login() {
                 />
               </div>
 
-            
               <button className="btn btn-primary w-100" type="submit">
                 Log In
               </button>
@@ -110,7 +104,6 @@ function Login() {
                 </p>
               </Link>
             </form>
-
           </div>
         </div>
       </div>

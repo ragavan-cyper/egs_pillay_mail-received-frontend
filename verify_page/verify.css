@@ -1,0 +1,100 @@
+/* ===== Page Background ===== */
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Message Wrapper ===== */
+.msg-wrapper {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1050;
+  width: 90%;
+  max-width: 400px;
+}
+
+/* ===== Alert Box ===== */
+.msg-box {
+  text-align: center;
+  font-weight: 500;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Fade Animation ===== */
+.fade-in {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Card Styling ===== */
+.card {
+  border: none;
+  border-radius: 18px;
+  background: #ffffff;
+}
+
+/* ===== Form Title ===== */
+.card h4 {
+  font-weight: 700;
+  color: #333;
+}
+
+/* ===== Input Fields ===== */
+.form-control {
+  height: 45px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.15rem rgba(102, 126, 234, 0.25);
+}
+
+/* ===== OTP Input Specific ===== */
+input[name="otp"] {
+  text-align: center;
+  letter-spacing: 6px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ===== Buttons ===== */
+.btn-success {
+  height: 45px;
+  border-radius: 12px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #28a745, #20c997);
+  border: none;
+}
+
+.btn-success:hover {
+  background: linear-gradient(135deg, #218838, #1aa179);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 576px) {
+  .card {
+    padding: 20px !important;
+  }
+
+  input[name="otp"] {
+    letter-spacing: 4px;
+    font-size: 16px;
+  }
+}

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "../signuppage/signup.css";
+import {  useNavigate } from "react-router-dom";
 
 function Signup() {
+  const navigate=useNavigate()
   const [data, setData] = useState({
     name: "",
     email: "",
@@ -24,10 +26,11 @@ function Signup() {
     e.preventDefault();
 
     if (!data.name || !data.email || !data.password) {
-      setSuccess("ALL FIELDS REQUIRED");
+      setError("ALL FIELDS REQUIRED");
       setTimeout(() => {
-        setSuccess("");
+        setError("");
       }, 2000);
+      return
     }
     try {
       const res = await axios.post(
@@ -37,22 +40,31 @@ function Signup() {
           withCredentials: true,
         }
       );
-      setError("LOGIN SUCCESS FULL");
+      if(res.status===201){
+             setSuccess("OTP SENT");
       setTimeout(() => {
-        setError("");
+       navigate("/verify",{state:{
+        name:data.name,
+        email:data.email,
+        password:data.password
+       }})
       }, 2000);
+      }
+     
     } catch (error) {
       if (error.response?.status === 404) {
         setError("EMAIL ID ALREADY USED");
         setTimeout(() => {
           setError("");
         }, 2000);
+        return
       }
       if (error.response?.status === 500) {
         setError("server crash");
         setTimeout(() => {
           setError("");
         }, 2000);
+        return
       }
     }
   };

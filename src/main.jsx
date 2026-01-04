@@ -8,6 +8,7 @@ import Signup from "./signuppage/signup.jsx";
 import Homepage from "./HOMEPAGE/homepage.jsx";
 import Message from "./message/message.jsx";
 import Createadmin from "./create-admin/createadmin.jsx";
+import Verify from "../verify_page/verify.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,16 +20,21 @@ const router = createBrowserRouter([
     element: <Signup />,
   },
   {
-    path:"/homepage",
-    element:<Homepage/>
-  },{
-    path:"/message",
-    element:<Message/>
-  },{
-    path:"/createadmin",
-    element:<Createadmin/>
-
-  }
+    path: "/verify",
+    element: <Verify />,
+  },
+  {
+    path: "/homepage",
+    element: <Homepage />,
+  },
+  {
+    path: "/message",
+    element: <Message />,
+  },
+  {
+    path: "/createadmin",
+    element: <Createadmin />,
+  },
 ]);
 
 createRoot(document.getElementById("root")).render(
