@@ -9,6 +9,7 @@ import Homepage from "./HOMEPAGE/homepage.jsx";
 import Message from "./message/message.jsx";
 import Createadmin from "./create-admin/createadmin.jsx";
 import Verify from "../verify_page/verify.jsx";
+import Analyse_job from "../analyse_job/analyse_job.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
     path: "/createadmin",
     element: <Createadmin />,
   },
+  {
+    path:"/analyse",
+    element:<Analyse_job/>
+  }
 ]);
 
 createRoot(document.getElementById("root")).render(

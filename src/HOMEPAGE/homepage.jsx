@@ -3,6 +3,7 @@ import "../HOMEPAGE/homepage.css";
 import { Link } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 import { useNavigate } from "react-router-dom";
+import Analyse_job from "../../analyse_job/analyse_job";
 
 function Homepage() {
   let user = null;
@@ -60,6 +61,18 @@ function Homepage() {
                   </Link>
                 </li>
               )}
+
+              <li className="nav-item">
+                <Link
+                  to="/analyse"
+                  className="links d-flex align-items-center gap-2"
+                >
+                  🚪 Analyse your job
+                </Link>
+                {/* <button onClick={logout} className="nav-link btn text-start">
+                  
+                </button> */}
+              </li>
 
               <li className="nav-item">
                 <button onClick={logout} className="nav-link btn text-start">
