@@ -10,6 +10,8 @@ import Message from "./message/message.jsx";
 import Createadmin from "./create-admin/createadmin.jsx";
 import Verify from "../verify_page/verify.jsx";
 import Analyse_job from "../analyse_job/analyse_job.jsx";
+import Marks_update from "../marks-update/marks-update.jsx";
+import Marks_get from "../marks-get/marks-get.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -39,6 +41,12 @@ const router = createBrowserRouter([
   {
     path:"/analyse",
     element:<Analyse_job/>
+  },{
+    path:"/marks-update",
+    element:<Marks_update/>
+  },{
+    path:"/mark-get",
+    element:<Marks_get/>
   }
 ]);
 

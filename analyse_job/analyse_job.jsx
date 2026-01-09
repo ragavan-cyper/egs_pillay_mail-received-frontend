@@ -144,7 +144,7 @@ function Analyse_job() {
                   </div>
                 ) : (
                   <p className="text-danger small">
-                    Match aagura jobs edhum illai. Skills-ai check pannunga.
+                    Not Found Any Jobs- please consider professinal mentors 
                   </p>
                 )}
               </div>
@@ -163,7 +163,7 @@ function Analyse_job() {
                     ))
                   ) : (
                     <p className="text-muted small">
-                      Neenga ellam kathukitinga! 🚀
+                      Your Learned all flat forms 
                     </p>
                   )}
                 </div>

@@ -29,11 +29,29 @@ function Homepage() {
               <li className="nav-item">
                 <a className="nav-link">🏠 Home</a>
               </li>
+                
 
+              {(user?.role==="superadmin" || user?.role ==="admin") && ( 
+
+              <li className="nav-item ">
+                <Link to="/marks-update">
+                 <a className="nav-link">📊 internal-marks-update</a>
+                
+                </Link>
+               
+              </li>
+              )}
+                 
+                 
               <li className="nav-item">
-                <a className="nav-link">📊 Marks</a>
+              <Link to="/mark-get">
+               <a className="nav-link">📊 internal-marks</a>
+              </Link>
+
+               
               </li>
 
+              
               <li className="nav-item">
                 <a className="nav-link">📢 Notices</a>
               </li>
